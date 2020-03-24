@@ -1,0 +1,33 @@
+name: quiz_covid19
+description: A new Flutter project.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^0.1.2
+  auto_size_text: ^2.1.0
+  http: ^0.12.0+4
+  share: ^0.6.3+6
+  flutter_launcher_icons: ^0.7.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter_icons:
+  image_path_android: "assets/android_icon.png"
+  image_path_ios: "assets/android_icon.png"
+  android: true 
+  ios: true 
+  adaptive_icon_background: "assets/android_bkg.png"
+  adaptive_icon_foreground: "assets/android_icon.png"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
