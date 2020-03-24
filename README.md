@@ -27,11 +27,11 @@ Tutorial de criação deste app [ainda em desenvolvimento]().
 
 ## Desafio para aula
 
-*   [ ] xxxx
-*   [ ] xxxx
-*   [ ] xxxx
-*   [ ] xxxx
-*   [ ] xxxx
+*   [ ] Defina um tema para o seu Quiz e monte um Google Sheets para ele com pelo menos 20 questões.
+*   [ ] Trocar os ícones tradicionais pelos ícones da biblioteca FontAwesom (plugin [font_awesome_flutter](https://pub.dev/packages/font_awesome_flutter));
+*   [ ] Crie um Widget na pasta components referente a área da Pergunta (QuestionContainer); Trocar o método _buildQuestion pelo Widget que você criou. Dicar, utilize CTRL + . para refatorar o método e criar um Widget.
+*   [ ] Crie um Widget na pasta components referente ao botão de resposta (AnswerButton). Trocar o método _buildAnswerButton pelo Widget que você criou. Dicar, utilize CTRL + . para refatorar o método e criar um Widget.
+*   [ ] Adicionar animações no AlertDialog de resultado (ResultDialog) e no AlertDialog final (FinishDialog)para deixar o Quiz mais dinâmico ([tutorial](https://medium.com/flutter-community/how-to-animate-dialogs-in-flutter-here-is-answer-492ea3a7262f));
 
 ## Licença
 
