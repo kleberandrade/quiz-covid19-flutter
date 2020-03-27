@@ -4,6 +4,14 @@ Quiz sobre COVID-10 desenvolvimento para a disciplina de Programação Mobile, p
 
 Tutorial de criação deste app [clique aqui](https://medium.com/@kleberandrade/desenvolvendo-um-quiz-com-flutter-e-google-sheets-414656cb89a2?sk=384abfba5e71c0e9bdb50e205358f761).
 
+## Architecture
+
+<p align="center">
+    <img src="https://miro.medium.com/max/700/1*D2JRAjhaZu13e-vKXidObw.png" width="740" />
+</p>
+
+## Screenshots
+
 <p align="center">
     <img src="https://cdn-images-1.medium.com/max/1200/1*YK7Lq0v7AwL1lI5asHEUIw.png" width="250"/>
     <img src="https://cdn-images-1.medium.com/max/1200/1*G7C9CVYGEBF-2QCbRserHQ.png" width="250"/>
