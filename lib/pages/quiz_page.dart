@@ -36,7 +36,7 @@ class _QuizPageState extends State<QuizPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.grey.shade900,
-        title: Text('QUIZ COVID-19 ( ${_scoreKeeper.length}/10 )'),
+        title: Text('QUIZ COVID-19 ( ${_scoreKeeper.length}/${_controller.questionsNumber} )'),
         centerTitle: true,
         elevation: 0.0,
       ),
@@ -128,12 +128,13 @@ class _QuizPageState extends State<QuizPage> {
                     ),
                   );
 
-                  if (_scoreKeeper.length < 10) {
+                  if (_scoreKeeper.length < _controller.questionsNumber) {
                     _controller.nextQuestion();
                   } else {
                     FinishDialog.show(
                       context,
                       hitNumber: _controller.hitNumber,
+                      questionNumber:  _controller.questionsNumber
                     );
                   }
                 });

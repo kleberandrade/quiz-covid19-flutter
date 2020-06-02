@@ -6,7 +6,8 @@ import 'package:share/share.dart';
 class FinishDialog {
   static Future show(
     BuildContext context, {
-    int hitNumber,
+    @required int hitNumber,
+    @required int questionNumber,
   }) {
     return showDialog<void>(
       context: context,
@@ -41,7 +42,7 @@ class FinishDialog {
               ),
               const SizedBox(height: 8),
               Text(
-                'Você acertou $hitNumber de 10!',
+                'Você acertou $hitNumber de $questionNumber!',
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,

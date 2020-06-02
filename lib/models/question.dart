@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 class Question {
   String question;
   String answer1;
@@ -28,8 +26,4 @@ class Question {
       answer2: map['answer2'],
     );
   }
-
-  String toJson() => json.encode(toMap());
-
-  static Question fromJson(String source) => fromMap(json.decode(source));
 }
