@@ -1,6 +1,6 @@
 # Migration from the 2020 app
 
-Version 2 requires Dart with null safety and modern Flutter. Run `flutter clean` followed by `flutter pub get` after switching SDKs. The lockfile is committed; do not restore the old dependencies.
+Version 2 requires Flutter 3.50.0 and Dart 3.14.0 with null safety. Material widgets now come from the official `material_ui` package, replacing the deprecated `package:flutter/material.dart` import. Run `flutter clean` followed by `flutter pub get` after switching SDKs. The lockfile is committed; do not restore the old dependencies.
 
 ## Code and data
 
