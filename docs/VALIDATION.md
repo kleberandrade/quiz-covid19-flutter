@@ -30,7 +30,7 @@ The installed `crapper`, `dryer` and `mutator` were invoked against `lib`. Each 
 
 ## Security and content review
 
-Manual review covered question input validation, score transitions, runtime networking and signing configuration. A narrow local scan for private-key headers, GitHub token patterns and signing/keystore files found none in the current source tree. Dedicated general-purpose secret/SAST tools were unavailable; this is not an exhaustive security audit or a review of all Git history.
+Manual review covered question input validation, score transitions, runtime networking and signing configuration. A narrow local scan for private-key headers, GitHub token patterns and signing/keystore files found none in the current source tree. The dependency follow-up also confirmed that GitHub Dependabot vulnerability alerts are disabled in repository settings; version-update PRs remain enabled. No absence of vulnerability alerts is claimed. Dedicated general-purpose secret/SAST tools were unavailable; this is not an exhaustive security audit or a review of all Git history.
 
 The original tracked `android/key.properties` was removed and ignored. Historical values remain in previous commits; any credentials/keystore still in use require owner-managed rotation before distribution. No credential revocation, history rewrite or app-store action was attempted. Android release signing is deliberately not configured. Debug keys used by Android's debug variant are development keys only.
 

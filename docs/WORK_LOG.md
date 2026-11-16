@@ -35,3 +35,11 @@ Final validation results and remaining limitations are recorded in `VALIDATION.m
 - The user authorized pushing the four modernization commits and monitoring CI. Pushed through `30c8752` to the then-default `master`; GitHub started the Linux/macOS CI matrix.
 - The user then requested `main` in place of `master`. Renamed the remote branch via GitHub's branch-rename API, renamed the local branch, updated upstream tracking and origin/HEAD, and changed the CI push trigger and status badge to `main`.
 - Hosted CI is now being monitored for the current `main` revision. The CI outcome and run link are reported in the follow-up chat. App-store/package deployment remains outside this authorization.
+
+## Dependency follow-up
+
+- Reviewed Dependabot PR #2: its only change upgrades `actions/checkout` 6.1.0 to 7.0.1. Verified the official release and immutable tag commit, then integrated the bot's commit while preserving its authorship.
+- Checked every workflow action against its official latest release: `setup-java` 6.3.0 and `flutter-action` 2.23.0 already had the current immutable hashes. Clarified their exact version comments.
+- Ran `flutter pub upgrade --major-versions`: no Dart dependency or constraint changes were available. `flutter pub outdated --json` confirms all direct/dev dependencies are current; `material_color_utilities` 0.13.0 and `test_api` 0.7.14 are exactly pinned inside Flutter's own pubspec files. Stable Flutter upstream remains at the installed 3.50.0 commit, so no newer stable SDK can currently release those pins. No overrides were introduced.
+- The available GitHub API credential received HTTP 403 for Dependabot vulnerability alerts. Verified the repository's authenticated Security → Dependabot page instead: vulnerability alerts are disabled in repository settings. This does not establish an absence of vulnerabilities; the reviewed open Dependabot item is a version-update PR. No security setting was changed.
+- Validated workflow YAML and whitespace, and continued monitoring the hosted Linux/macOS checks on the updated main revision.
