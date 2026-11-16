@@ -33,7 +33,12 @@ class SourcesPage extends StatelessWidget {
                         style: Theme.of(context).textTheme.titleMedium,
                       ),
                       Text('Revisão: ${question.reviewedOn}'),
-                      SelectableText(question.source.toString()),
+                      Semantics(
+                        container: true,
+                        label: 'Fonte: ${question.source}',
+                        excludeSemantics: true,
+                        child: SelectableText(question.source.toString()),
+                      ),
                     ],
                   ),
                 ),

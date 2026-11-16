@@ -43,6 +43,7 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text('Fontes e informações'), findsWidgets);
     expect(find.textContaining('2026-11-16'), findsWidgets);
+    expect(find.bySemanticsLabel('Fonte: ${question.source}'), findsOneWidget);
     await tester.tap(find.byType(BackButton));
     await tester.pumpAndSettle();
     await tester.tap(find.text('Certa'));
