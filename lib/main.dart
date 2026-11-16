@@ -1,18 +1,14 @@
-import 'package:flutter/material.dart';
-import 'package:quiz_covid19/pages/quiz_page.dart';
+import 'package:flutter/foundation.dart';
+import 'package:material_ui/material_ui.dart';
+import 'package:flutter/services.dart';
 
-void main() => runApp(MyApp());
+import 'app.dart';
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Quiz COVID-19',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: QuizPage(),
-    );
-  }
+void main() {
+  LicenseRegistry.addLicense(() async* {
+    yield LicenseEntryWithLineBreaks([
+      'Roboto',
+    ], await rootBundle.loadString('assets/fonts/LICENSE.txt'));
+  });
+  runApp(const QuizApp());
 }
