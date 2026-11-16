@@ -1,6 +1,6 @@
 # Quiz COVID-19
 
-[![CI](https://github.com/kleberandrade/quiz-covid19-flutter/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/kleberandrade/quiz-covid19-flutter/actions/workflows/ci.yml)
+[![CI](https://github.com/kleberandrade/quiz-covid19-flutter/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/kleberandrade/quiz-covid19-flutter/actions/workflows/ci.yml)
 [![Flutter](https://img.shields.io/badge/Flutter-3.50.0-02569B?logo=flutter)](https://docs.flutter.dev/)
 [![Dart](https://img.shields.io/badge/Dart-3.14-0175C2?logo=dart)](https://dart.dev/)
 [![Targets](https://img.shields.io/badge/targets-Android%20%7C%20iOS%20%7C%20Web-006B60)](#requirements)

@@ -20,7 +20,7 @@ TDD evidence: the repeated-answer regression initially failed because a second a
 - `flutter build ios --simulator --debug`: passed. Output: `build/ios/iphonesimulator/Runner.app`. Bundle ID remains `com.example.quizCovid19`; minimum deployment target is iOS 15.
 - Browser smoke check: served the web release on a loopback-only HTTP server, visually inspected quiz/feedback, enabled web accessibility, navigated to sources and opened software licenses. Confirmed the bundled Roboto Apache license. The screenshot in `screenshots/quiz-feedback.jpg` is from that real local app, not a mockup. No physical device or iOS simulator was launched.
 - `flutter pub outdated`: all direct and development dependencies are current. `material_color_utilities` 0.13.0 and `test_api` 0.7.14 are constrained by the Flutter SDK; newer incompatible transitive releases were deliberately not forced.
-- CI and Dependabot YAML parse successfully locally. Git diff whitespace checks and documentation relative links were checked. Remote CI has **not** run for these commits because no push was authorized.
+- CI and Dependabot YAML parse successfully locally. Git diff whitespace checks and documentation relative links were checked. Remote CI was initially unrun during local modernization. The user subsequently authorized push and CI monitoring; see the publication follow-up in `WORK_LOG.md` and the [main branch workflow](https://github.com/kleberandrade/quiz-covid19-flutter/actions/workflows/ci.yml?query=branch%3Amain) for hosted results.
 
 ## Coverage and tool limitations
 
@@ -38,4 +38,4 @@ The content source and review date are in `CONTENT.md`. No clinician review, med
 
 ## Remaining release checks
 
-Run the GitHub workflow after an authorized push; test installed builds on physical devices and actual TalkBack/VoiceOver sessions; review current health sources and Portuguese wording with an appropriate reviewer; configure private release signing and store metadata. Test offline native startup on devices. Web assets require an HTTP(S) server and no PWA/offline caching layer is provided. This update does not claim store approval, release-signing verification, physical testing or a comprehensive browser-compatibility pass.
+Keep the GitHub workflow green on `main`; test installed builds on physical devices and actual TalkBack/VoiceOver sessions; review current health sources and Portuguese wording with an appropriate reviewer; configure private release signing and store metadata. Test offline native startup on devices. Web assets require an HTTP(S) server and no PWA/offline caching layer is provided. This update does not claim store approval, release-signing verification, physical testing or a comprehensive browser-compatibility pass.

@@ -28,4 +28,10 @@ Final validation results and remaining limitations are recorded in `VALIDATION.m
 
 - Repeated the three platform builds after the source-label fix: web release passed (28.6 s), Android debug passed (7.0 s), and iOS simulator debug passed (10.4 s). These are observed build durations, not performance benchmarks.
 - Verified the lockfile with enforcement, formatting, YAML parsing, documentation links and `git diff --check`. Recorded measured domain line counts and remaining coverage/device/CI/security limits in `VALIDATION.md`.
-- Prepared the English README with current commands, supported-version/target/license badges and the actual local screenshot. Final work is committed locally on `master`; push, hosted CI and release distribution remain pending separate authorization.
+- Prepared the English README with current commands, supported-version/target/license badges and the actual local screenshot. At the end of the initial modernization, work was committed locally on `master`; push, hosted CI and release distribution were pending separate authorization.
+
+## Authorized publication follow-up
+
+- The user authorized pushing the four modernization commits and monitoring CI. Pushed through `30c8752` to the then-default `master`; GitHub started the Linux/macOS CI matrix.
+- The user then requested `main` in place of `master`. Renamed the remote branch via GitHub's branch-rename API, renamed the local branch, updated upstream tracking and origin/HEAD, and changed the CI push trigger and status badge to `main`.
+- Hosted CI is now being monitored for the current `main` revision. The CI outcome and run link are reported in the follow-up chat. App-store/package deployment remains outside this authorization.
